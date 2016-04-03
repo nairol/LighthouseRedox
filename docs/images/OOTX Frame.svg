@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="397.3819"
+   height="125.98232"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="OOTX Frame.svg"
+   inkscape:export-filename="OOTX Frame.png"
+   inkscape:export-xdpi="357.16272"
+   inkscape:export-ydpi="357.16272">
+  <title
+     id="title3893">OOTX Frame</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.3822116"
+     inkscape:cx="203.32417"
+     inkscape:cy="49.780737"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     units="mm"
+     fit-margin-top="1"
+     fit-margin-left="1"
+     fit-margin-right="1"
+     fit-margin-bottom="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       units="mm"
+       spacingx="1mm"
+       spacingy="1mm"
+       originx="1.075mm"
+       originy="0.48000012mm" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>OOTX Frame</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>nairol</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:source>https://github.com/nairol/LighthouseRedox</dc:source>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(3.8090551,-928.08064)">
+    <rect
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="rect3899"
+       width="145.27559"
+       height="17.716536"
+       x="124.01575"
+       y="931.88971" />
+    <rect
+       style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3889"
+       width="60.236221"
+       height="17.716509"
+       x="63.779526"
+       y="931.88977" />
+    <rect
+       style="fill:#ff7f00;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3887"
+       width="63.779526"
+       height="17.716509"
+       x="0"
+       y="931.88977"
+       ry="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.53149605000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 180.70866,949.60629 3.54331,0 0,10.6299 -3.54331,0"
+       id="path3003"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.53149605000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 0,949.60629 180.70866,0 0,10.6299 -180.70866,0 z"
+       id="path2987"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 63.779528,949.60629 0,10.6299"
+       id="path2995"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 120.47244,949.60629 0,10.6299"
+       id="path2997"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 124.01575,949.60629 0,10.6299"
+       id="path2999"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 152.3622,949.60629 0,10.6299"
+       id="path3001"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.53149605000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 386.22047,949.60629 3.54331,0 0,10.6299 -3.54331,0"
+       id="path3039"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.53149605000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 329.52755,949.60629 56.69292,0 0,10.6299 -56.69292,0"
+       id="path3037"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.53149605000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 325.98425,949.60629 3.5433,0 0,10.6299 -3.5433,0"
+       id="path3035"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.53149605000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 269.29133,949.60629 56.69292,0 0,10.6299 -56.69292,0"
+       id="path3033"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.53149605000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 265.74803,949.60629 3.5433,0 0,10.6299 -3.5433,0"
+       id="path3031"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.53149605000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 237.40157,949.60629 28.34646,0 0,10.6299 -28.34646,0"
+       id="path3029"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.53149605000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 209.05511,949.60629 28.34646,0 0,10.6299 -28.34646,0"
+       id="path3027"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.53149605000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 205.51181,949.60629 0,10.6299 3.5433,0 0,-10.6299 z"
+       id="path3025"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:0.53149606, 0.53149606;stroke-dashoffset:0"
+       d="m 184.25197,949.60619 21.25984,0"
+       id="path3045"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3815"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:-0.055px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       transform="translate(0,225.22829)"><flowRegion
+         id="flowRegion3817"><rect
+           id="rect3819"
+           width="389.76379"
+           height="7.0866036"
+           x="0"
+           y="725.92126"
+           style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;letter-spacing:-0.055px;text-anchor:middle;font-family:Courier New;-inkscape-font-specification:Courier New" /></flowRegion><flowPara
+         id="flowPara3821">000000000000000001................1................1      1................1................1................1</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3823"
+       style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion3825"><rect
+           id="rect3827"
+           width="13.171183"
+           height="11.080519"
+           x="0"
+           y="726.5329" /></flowRegion><flowPara
+         id="flowPara3829" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3831"
+       style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion3833"><rect
+           id="rect3835"
+           width="83.673065"
+           height="49.671642"
+           x="71.550819"
+           y="673.72632" /></flowRegion><flowPara
+         id="flowPara3837" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3839"
+       style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion3841"><rect
+           id="rect3843"
+           width="158.77185"
+           height="64.454865"
+           x="38.43639"
+           y="660.12573" /></flowRegion><flowPara
+         id="flowPara3845" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3857"
+       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion3859"><rect
+           id="rect3861"
+           width="65.019646"
+           height="17.770643"
+           x="6.2719917"
+           y="694.33667"
+           style="font-size:6px" /></flowRegion><flowPara
+         id="flowPara3863" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3865"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(4.8362656,228.11527)"><flowRegion
+         id="flowRegion3867"><rect
+           id="rect3869"
+           width="63.779526"
+           height="7.0865879"
+           x="-4.8362656"
+           y="704.66144"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3871">Preamble</flowPara></flowRoot>    <flowRoot
+       transform="translate(64.097106,228.11527)"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3875"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3877"><rect
+           y="704.66144"
+           x="-0.31757843"
+           height="7.0865879"
+           width="60.236221"
+           id="rect3879"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3881">Payload Length</flowPara></flowRoot>    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3897"
+       width="3.5433087"
+       height="7.0867348"
+       x="120.47244"
+       y="942.51965" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3901"
+       width="3.5432546"
+       height="7.0866942"
+       x="180.70866"
+       y="942.51965" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3903"
+       width="3.5432184"
+       height="7.0866613"
+       x="205.51181"
+       y="942.51965" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3905"
+       width="3.5431752"
+       height="7.0863414"
+       x="265.74802"
+       y="942.51965" />
+    <rect
+       style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3907"
+       width="120.47244"
+       height="17.716536"
+       x="269.29135"
+       y="931.88977" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3909"
+       d="m 184.25197,960.23619 21.25984,0"
+       style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:0.53149606, 0.53149606;stroke-dashoffset:0" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3911"
+       width="3.5433071"
+       height="7.0866141"
+       x="325.98425"
+       y="942.51965" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3913"
+       width="3.5433071"
+       height="7.0866141"
+       x="386.22046"
+       y="942.51965" />
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 124.01575,931.8897 145.27559,0"
+       id="path3915"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3062"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(120.78765,230.1936)"><flowRegion
+         id="flowRegion3064"><rect
+           style="text-align:center;text-anchor:middle"
+           id="rect3066"
+           width="145.27556"
+           height="7.0864844"
+           x="3.2280979"
+           y="702.58307" /></flowRegion><flowPara
+         id="flowPara3068">Payload</flowPara></flowRoot>    <flowRoot
+       transform="translate(218.23511,232.2561)"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3070"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3072"><rect
+           y="700.52057"
+           x="51.056229"
+           height="7.0860672"
+           width="120.47253"
+           id="rect3074"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3076">CRC32 of Payload</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3078"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(64.097106,235.22829)"><flowRegion
+         id="flowRegion3080"><rect
+           style="text-align:center;text-anchor:middle"
+           id="rect3082"
+           width="60.236217"
+           height="7.0865235"
+           x="-0.31757843"
+           y="707.29132" /></flowRegion><flowPara
+         id="flowPara3084"
+         style="font-size:5px">uint16 little-endian</flowPara></flowRoot>    <flowRoot
+       transform="translate(2.0928888,234.60381)"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3086"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3088"><rect
+           y="707.91583"
+           x="-2.0928888"
+           height="7.0865278"
+           width="63.779518"
+           id="rect3090"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:5px"
+         id="flowPara3092">17 zero-bits, 1 one-bit</flowPara></flowRoot>    <flowRoot
+       transform="translate(122.56533,234.60381)"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3094"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3096"><rect
+           y="707.91583"
+           x="1.450418"
+           height="7.0866289"
+           width="28.346451"
+           id="rect3098"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:5px"
+         id="flowPara3100">Byte 0</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3102"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(150.92606,233.97881)"><flowRegion
+         id="flowRegion3104"><rect
+           style="text-align:center;text-anchor:middle"
+           id="rect3106"
+           width="28.34646"
+           height="7.0864806"
+           x="1.4361447"
+           y="708.54083" /></flowRegion><flowPara
+         id="flowPara3108"
+         style="font-size:5px">Byte 1</flowPara></flowRoot>    <flowRoot
+       transform="translate(207.61897,233.35381)"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3110"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3112"><rect
+           y="709.16583"
+           x="1.4361482"
+           height="7.0864935"
+           width="28.346464"
+           id="rect3114"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:5px"
+         id="flowPara3116">Byte N-2</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3118"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(235.96543,232.72881)"><flowRegion
+         id="flowRegion3120"><rect
+           style="text-align:center;text-anchor:middle"
+           id="rect3122"
+           width="28.346458"
+           height="7.0864501"
+           x="1.4361448"
+           y="709.79083" /></flowRegion><flowPara
+         id="flowPara3124"
+         style="font-size:5px">Byte N-1</flowPara></flowRoot>    <rect
+       y="967.32275"
+       x="7.0866141"
+       height="7.0866275"
+       width="3.5433071"
+       id="rect3134"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3136"
+       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(0,290.55116)"><flowRegion
+         id="flowRegion3138"><rect
+           id="rect3140"
+           width="216.14174"
+           height="7.0865946"
+           x="14.173228"
+           y="676.77167" /></flowRegion><flowPara
+         id="flowPara3142">Sync Bit / Stuffed Bit</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3146"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(12.72281,269.41192)"><flowRegion
+         id="flowRegion3148"><rect
+           style="text-align:start;text-anchor:start"
+           id="rect3150"
+           width="233.85826"
+           height="7.0866184"
+           x="1.4504184"
+           y="704.9975" /></flowRegion><flowPara
+         id="flowPara3152"
+         style="font-size:5px;text-align:start;text-anchor:start">Inserted after every 16 bits. Every 17th bit is a Sync Bit. Counting starts after the Preamble sequence. </flowPara></flowRoot>    <rect
+       style="fill:#ff7f00;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3154"
+       width="3.5433071"
+       height="10.629921"
+       x="7.0866141"
+       y="985.03931" />
+    <flowRoot
+       transform="translate(3.5290354,317.41788)"
+       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3924"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3926"><rect
+           y="667.62146"
+           x="10.644193"
+           height="7.0866175"
+           width="180.70866"
+           id="rect3928" /></flowRegion><flowPara
+         id="flowPara3930">Preamble</flowPara></flowRoot>    <flowRoot
+       transform="translate(16.279035,297.12132)"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3934"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3936"><rect
+           y="695.00464"
+           x="-2.1058066"
+           height="7.0866127"
+           width="375.59055"
+           id="rect3938"
+           style="text-align:start;text-anchor:start" /></flowRegion><flowPara
+         style="font-size:5px;text-align:start;text-anchor:start"
+         id="flowPara3940">Unique bit pattern that marks the beginning of a new frame. It is unique because Sync Bits make blocks of more than 16 zero-bits impossible inside a frame.</flowPara></flowRoot>    <rect
+       style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3942"
+       width="3.5433071"
+       height="10.629921"
+       x="7.0866141"
+       y="1002.7559" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3944"
+       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(7.0602854,337.20405)"><flowRegion
+         id="flowRegion3946"><rect
+           id="rect3948"
+           width="184.25195"
+           height="7.0864291"
+           x="7.1129432"
+           y="665.55182" /></flowRegion><flowPara
+         id="flowPara3950">Payload Length</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3952"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(19.810285,321.29455)"><flowRegion
+         id="flowRegion3954"><rect
+           style="text-align:start;text-anchor:start"
+           id="rect3956"
+           width="375.59055"
+           height="7.0866442"
+           x="-5.6370568"
+           y="688.54791" /></flowRegion><flowPara
+         id="flowPara3958"
+         style="font-size:5px;text-align:start;text-anchor:start">Number of payload bytes in this frame. Sync Bits are ignored and do not contribute to this number.</flowPara></flowRoot>    <rect
+       y="1020.4719"
+       x="7.0866141"
+       height="10.629921"
+       width="3.5433071"
+       id="rect3960"
+       style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <flowRoot
+       transform="translate(7.0602854,354.92001)"
+       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3962"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3964"><rect
+           y="665.55182"
+           x="7.1129432"
+           height="7.0864291"
+           width="184.25195"
+           id="rect3966" /></flowRegion><flowPara
+         id="flowPara3968">Payload</flowPara></flowRoot>    <flowRoot
+       transform="translate(19.810285,339.01051)"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3970"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3972"><rect
+           y="688.54791"
+           x="-5.6370568"
+           height="7.0866442"
+           width="375.59055"
+           id="rect3974"
+           style="text-align:start;text-anchor:start" /></flowRegion><flowPara
+         style="font-size:5px;text-align:start;text-anchor:start"
+         id="flowPara3976">Array of data bytes. If the Payload Length field is not a multiple of 2, a padding byte (zero-byte) is appended so that the Payload field can always end with a Sync Bit.</flowPara></flowRoot>    <rect
+       style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3978"
+       width="3.5433071"
+       height="10.629921"
+       x="7.0866141"
+       y="1038.1885" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3980"
+       style="font-size:6px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(7.0602854,372.63655)"><flowRegion
+         id="flowRegion3982"><rect
+           id="rect3984"
+           width="184.25195"
+           height="7.0864291"
+           x="7.1129432"
+           y="665.55182" /></flowRegion><flowPara
+         id="flowPara3986">CRC32 of Payload</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3988"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(19.810285,356.72705)"><flowRegion
+         id="flowRegion3990"><rect
+           style="text-align:start;text-anchor:start"
+           id="rect3992"
+           width="375.59055"
+           height="7.0866442"
+           x="-5.6370568"
+           y="688.54791" /></flowRegion><flowPara
+         id="flowPara3994"
+         style="font-size:5px;text-align:start;text-anchor:start">Little-endian representation of the CRC32 of all payload bytes excluding the padding byte (if used) and ignoring all Sync Bits.</flowPara></flowRoot>    <path
+       style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 297.6378,641.33858 0,-3.54331"
+       id="path3996"
+       inkscape:connector-curvature="0"
+       transform="translate(0,308.2677)" />
+    <path
+       style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 357.87402,641.33858 0,-3.54331"
+       id="path3998"
+       inkscape:connector-curvature="0"
+       transform="translate(0,308.2677)" />
+    <flowRoot
+       transform="translate(267.85519,232.10385)"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot4000"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4002"><rect
+           y="710.41583"
+           x="1.4361485"
+           height="7.0862856"
+           width="28.34646"
+           id="rect4004"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:5px"
+         id="flowPara4006">LSB</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4008"
+       style="font-size:6px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(356.43787,231.47885)"><flowRegion
+         id="flowRegion4010"><rect
+           style="text-align:center;text-anchor:middle"
+           id="rect4012"
+           width="28.346457"
+           height="7.086596"
+           x="1.4361458"
+           y="711.04083" /></flowRegion><flowPara
+         id="flowPara4014"
+         style="font-size:5px">MSB</flowPara></flowRoot>  </g>
+</svg>
