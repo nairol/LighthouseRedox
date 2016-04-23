@@ -67,6 +67,9 @@ Offset | Type   | Size | Name           | Description
 ...    | ...    | ...  | ...            | ...
 0x33   | uint8  | 1    | sample[2].seq  | 
 
+Axes: When wearing the HMD +X points to the right, +Y points downwards, +Z points forwards.
+
+The right-hand rule is used.
 
 ### HMD: Lighthouse Sensors
 
@@ -138,15 +141,15 @@ Offset | Type   | Size | Name                | Description
 -------|--------|------|---------------------|------------------------------------------------------------
 0x00   | uint8  | 1    | reportID            | HID report identifier (=1)
 0x01   | ?      | 1    | ?                   | unknown
-0x02   | uint16 | 2    | eventType           | 0x0B04: Ping (every second) / 0x3C01: User input
-0x04   | uint32 | 4    | eventCount          | Counter that increases with every report
+0x02   | uint16 | 2    | reportType(?)       | 0x0B04: Ping (every second) / 0x3C01: User input
+0x04   | uint32 | 4    | reportCount         | Counter that increases with every report
 0x08   | uint32 | 4    | pressedButtons      | Bit field, see below for individual buttons
 0x0C   | uint16 | 2    | triggerOrBattery    | Analog trigger value (user input) / Battery voltage? (ping)
 0x0E   | uint8  | 1    | batteryCharge       | Bit 7: Charging / Bit 6..0: Battery charge in percent
 0x0F   | ?      | 1    | ?                   | unknown
 0x10   | uint32 | 4    | hardwareID          | Hardware ID (user input) / 0x00000000 (ping)
 0x14   | int16  | 2    | touchpadHorizontal  | Horizontal thumb position (Left: -32768 / Right: 32767)
-0x16   | int16  | 2    | touchpadVerical     | Vertical thumb position (Bottom: -32768 / Top: 32767)
+0x16   | int16  | 2    | touchpadVertical     | Vertical thumb position (Bottom: -32768 / Top: 32767)
 0x18   | ?      | 2    | ?                   | unknown
 0x1A   | uint16 | 2    | triggerHighRes      | Analog trigger value with higher resolution
 0x1C   | ?      | 24   | ?                   | unknown
@@ -154,6 +157,15 @@ Offset | Type   | Size | Name                | Description
 0x36   | ?      | 8    | ?                   | unknown
 0x3E   | uint8  | 1    | someBitFieldMaybe   | 0x00: ping / 0x64: user input
 0x3F   | ?      | 1    | ?                   | unknown
+
+Buttons:
+
+Bit  0: Trigger Button  
+Bit  3: Grip Buttons  
+Bit 12: Application Button  
+Bit 13: System Button
+Bit 18: Touchpad pressed
+Bit 20: Thumb on touchpad
 
 
 ## Wireless Controller Dongle
