@@ -172,6 +172,101 @@ Bit 20: Thumb on touchpad
 
 Work in progress...
 
-Basically everything is multiplexed together in some way and I still need to find out how. :)
+* Report ID: 35
+* Report Length: 30 Bytes
+* Device -> Host
+* Interrupt Transfer
 
-It seems to depend on the timestamp that is sent in each report...
+Offset | Type   | Size | Name                | Description
+-------|--------|------|---------------------|------------------------------------------------------------
+0x00   | uint8  | 1    | reportID            | HID report identifier (=35)
+0x01   | uint8  | 1    | time1               | Bits 31-24 of a 48 MHz counter
+0x02   | uint8  | 1    | type1(?)            | Bits 15-8 of the type value(?)
+0x03   | uint8  | 1    | time2               | Bits 23-16 of a 48 MHz counter
+0x04   | uint8  | 1    | type2(?)            | Bits 7-0 of the type value(?)
+
+Depending on the value of ((type1 << 8) | type2), the remaining up to 25
+bytes contain a different type of event:
+
+### Types: 0x3f1 (Button), 0x4f5 (Trigger button)
+
+Offset | Type   | Size | Name                | Description
+-------|--------|------|---------------------|------------------------------------------------------------
+0x05   | uint8  | 1    | pressedButtons      | Bit field, seel below for individual buttons
+0x06   | ?      | 4    | ?                   | unknown
+
+Buttons:
+
+Bit  0: Trigger button
+Bit  1: Touchpad pressed
+Bit  2: Thumb on touchpad
+Bit  3: System button
+Bit  4: Grip button
+Bit  5: Menu button
+
+### Type: 0x3f4 (Analog trigger value)
+
+Offset | Type   | Size | Name                | Description
+-------|--------|------|---------------------|------------------------------------------------------------
+0x05   | uint8  | 1    | triggerValue        | Analog trigger value
+0x06   | ?      | 4    | ?                   | unknown
+
+### Type: 0x6f2 (Touch movement)
+
+Offset | Type   | Size | Name                | Description
+-------|--------|------|---------------------|------------------------------------------------------------
+0x05   | int16  | 2    | touchpadHorizontal  | Horizontal thumb position
+0x07   | int16  | 2    | touchpadVertical    | Vertical thumb position
+0x09   | ?      | 4    | ?                   | unknown
+
+### Type: 0x7f3 (Touch start/stop event)
+
+Offset | Type   | Size | Name                | Description
+-------|--------|------|---------------------|------------------------------------------------------------
+0x05   | int16  | 1    | pressedButtons      | Bit field, see above for individual buttons
+0x06   | int16  | 2    | touchpadHorizontal  | Horizontal thumb position
+0x08   | int16  | 2    | touchpadVertical    | Vertical thumb position
+0x0A   | ?      | 4    | ?                   | unknown
+
+### Type: 0xfe8 (IMU sample)
+
+Offset | Type   | Size | Name                | Description
+-------|--------|------|---------------------|------------------------------------------------------------
+0x05   | uint8  | 1    | time3               | Bits 15-8 of a 48 MHz counter
+0x06   | int16  | 2    | accX                | Acceleration along the X axis
+0x08   | int16  | 2    | accY                | Acceleration along the Y axis
+0x0A   | int16  | 2    | accZ                | Acceleration along the Z axis
+0x0C   | int16  | 2    | rotX                | Angular velocity along the X axis
+0x0E   | int16  | 2    | rotY                | Angular velocity along the Y axis
+0x10   | int16  | 2    | rotZ                | Angular velocity along the Z axis
+0x12   | ?      | 4    | ?                   | unknown
+
+### Type: 0x11e1 (Ping, battery charge)
+
+Offset | Type   | Size | Name                | Description
+-------|--------|------|---------------------|------------------------------------------------------------
+0x05   | uint8  | 1    | chargeStatus        | Bit 8 is charging, bits 7-0 are battery charge in percent
+0x06   | ?      | 2    | ?                   | unknown
+0x08   | int16  | 2    | accX                | Acceleration along the X axis
+0x0A   | int16  | 2    | accY                | Acceleration along the Y axis
+0x0C   | int16  | 2    | accZ                | Acceleration along the Z axis
+0x0E   | int16  | 2    | rotX                | Angular velocity along the X axis
+0x10   | int16  | 2    | rotY                | Angular velocity along the Y axis
+0x12   | int16  | 2    | rotZ                | Angular velocity along the Z axis
+0x14   | ?      | 4    | ?                   | unknown
+
+Other observed but not yet understood types are:
+
+* Type: 0x7f6, 0x10f9, 0x10fc, 0x11fd, 0x13fa, 0x14fb, 0x14f9 (Unknown)
+* Type: 0xae1, 0x15ff, 0x8f7 (Unknown, sent during poweron)
+
+* Report ID: 36
+* Report Length: 59 Bytes
+* Device -> Host
+* Interrupt Transfer
+
+This is basically the same as Report ID 35, except that it contains the payload
+of two events. The first starts at offset 0x01, the second at offset 0x30.
+
+As soon as the controller can see a lighthouse base station, lighthouse events
+are sent with wildly varying values in the type1 and type2 bytes.
