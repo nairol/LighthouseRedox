@@ -44,6 +44,97 @@ Offset | Type   | Size | Name                | Description
 
 ### HMD: IMU
 
+* Report ID: 5
+* Report Length: 64 Bytes
+* Device -> Host
+* Control Transfer
+
+Offset | Type   | Size | Name             | Description
+-------|--------|------|------------------|-----------------------------------
+0x00   | uint8  | 1    | reportID         | HID report identifier (=5)
+0x01   | uint32 | 4    | firmwareVersion  | Firmware version
+0x09   | string | 16   | firmwareProvider | "steamservices"
+0x19   | string | 16   | firmwareName     | "firmware-win32"
+0x29   | uint8  | 1    | microRevision    | Hardware micro revision
+0x2A   | uint8  | 1    | minorRevision    | Hardware minor revision
+0x2B   | uint8  | 1    | majorRevision    | Hardware major revision
+0x2C   | uint8  | 1    | productID        | Hardware product ID: 128
+0x31   | uint8  | 1    | minorFPGA        | FPGA minor version
+0x32   | uint8  | 1    | majorFPGA        | FPGA major version
+
+This report returns information about the HMD firmware, FPGA, and hardware version.
+
+* Report ID: 8
+* Report Length: 64 Bytes
+* Device -> Host
+* Control Transfer
+
+Offset | Type   | Size | Name           | Description
+-------|--------|------|----------------|-----------------------------------
+0x00   | uint8  | 1    | reportID       | HID report identifier (=8)
+0x01   | uint32 | 4    | offset         | Current read offset
+0x05   | uint32 | 4    | size           | Size of the userdata partition (3997696 bytes)
+
+This report returns the current read offset and total size of the userdata
+partition containing the two mura correction PNG images.
+
+* Report ID: 8
+* Report Length: 9 Bytes
+* Host -> Device
+* Control Transfer
+
+Offset | Type   | Size | Name           | Description
+-------|--------|------|----------------|-----------------------------------
+0x00   | uint8  | 1    | reportID       | HID report identifier (=8)
+0x01   | uint32 | 4    | offset         | Read offset to be set
+0x05   | uint32 | 4    | ignored(?)     | Write 0
+
+This report sets the read offset for the following Report ID 9 transfer.
+Wait for a millisecond between seeking and the first read.
+
+* Report ID: 9
+* Report Length: 64 Bytes
+* Device -> Host
+* Control Transfer
+
+Offset | Type   | Size | Name           | Description
+-------|--------|------|----------------|-----------------------------------
+0x00   | uint8  | 1    | reportID       | HID report identifier (=9)
+0x01   | uint8  | 63   | data           | Userdata bytes starting at offset
+
+This report returns 63 bytes of userdata and increments the read offset by 63
+bytes. Repeatedly request Report ID 9, to read from the userdata partition.
+Wait for a millisecond between reads.
+
+* Report ID: 16
+* Report Length: 64 Bytes
+* Device -> Host
+* Control Transfer
+
+Offset | Type   | Size   | Name           | Description
+-------|--------|--------|----------------|-----------------------------------
+0x00   | uint8  | 1      | reportID       | HID report identifier (=16)
+0x01   | ?      | 63     | ?              | unknown
+
+This report preceeds repeated transfers of Report ID 17 to read out the
+configuration store. Maybe it just puts the firmware into config read mode
+and resets the read offset to 0.
+
+* Report ID: 17
+* Report Length: 64 Bytes
+* Device -> Host
+* Control Transfer
+
+Offset | Type   | Size   | Name           | Description
+-------|--------|--------|----------------|-----------------------------------
+0x00   | uint8  | 1      | reportID       | HID report identifier (=17)
+0x01   | uint8  | 1      | length         | Length (up to 62)
+0x02   | uint8  | length | data           | Config data starting at offset
+
+This report returns up to 62 bytes of config data and increments the read
+offset by 62. Repeatedly request Report ID 17 until it returns 0 in the length
+byte. The configuration store contains a zlib-compressed JSON file.
+
 * Report ID: 32
 * Report Length: 52 Bytes
 * Device -> Host
@@ -172,6 +263,41 @@ Bit 20: Thumb on touchpad
 
 Work in progress...
 
+* Report ID: 5
+* Report Length: 64 Bytes
+* Device -> Host
+* Control Transfer
+
+Offset | Type   | Size | Name             | Description
+-------|--------|------|------------------|-----------------------------------
+0x00   | uint8  | 1    | reportID         | HID report identifier (=5)
+0x01   | uint32 | 4    | firmwareVersion  | Firmware version
+0x09   | string | 16   | firmwareProvider | "htcvrsoftware"
+0x19   | string | 16   | firmwareName     | "firmware-win32"
+0x29   | uint8  | 1    | microRevision    | Hardware micro revision
+0x2A   | uint8  | 1    | minorRevision    | Hardware minor revision
+0x2B   | uint8  | 1    | majorRevision    | Hardware major revision
+0x2C   | uint8  | 1    | productID        | Hardware product ID: 129
+0x31   | uint8  | 1    | minorFPGA        | FPGA minor version
+0x32   | uint8  | 1    | majorFPGA        | FPGA major version
+
+This report returns information about the controller firmware, FPGA, and
+hardware version. This is the same as Report ID 5 in the IMU section.
+
+* Report ID: 16
+* Report Length: 64 Bytes
+* Device -> Host
+* Control Transfer
+
+See Report ID 16 in the IMU section.
+
+* Report ID: 17
+* Report Length: 64 Bytes
+* Device -> Host
+* Control Transfer
+
+See Report ID 17 in the IMU section.
+
 * Report ID: 35
 * Report Length: 30 Bytes
 * Device -> Host
@@ -270,3 +396,37 @@ of two events. The first starts at offset 0x01, the second at offset 0x30.
 
 As soon as the controller can see a lighthouse base station, lighthouse events
 are sent with wildly varying values in the type1 and type2 bytes.
+
+* Report ID: 255
+* Host -> Device
+* Control Transfer
+
+Offset | Type   | Size | Name           | Description
+-------|--------|------|----------------|-----------------------------------
+0x00   | uint8  | 1    | reportID       | HID report identifier (=255)
+0x01   | uint8  | 1    | command        | Command to send to the controller
+0x02   | uint8  | 1    | length         | Length of the following command payload
+
+Depending on the command, the payload and with it the sent report has a
+different length. Known commands:
+
+### Command: 0x8f (Haptic pulse)
+
+* Report Length: 10
+
+Offset | Type   | Size | Name           | Description
+-------|--------|------|----------------|-----------------------------------
+0x02   | uint8  | 1    | length         | Payload length: 7
+0x03   | ?      | 7    | ?              | unknown
+
+### Command: 0x9f (Power off)
+
+* Report Length: 7
+
+Offset | Type   | Size | Name           | Description
+-------|--------|------|----------------|-----------------------------------
+0x02   | uint8  | 1    | length         | Payload length: 4
+0x03   | uint8  | 1    | magic0         | Constant: 'o'
+0x04   | uint8  | 1    | magic1         | Constant: 'f'
+0x05   | uint8  | 1    | magic2         | Constant: 'f'
+0x06   | uint8  | 1    | magic3         | Constant: '!'
