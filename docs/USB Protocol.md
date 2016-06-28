@@ -33,14 +33,19 @@ Wireless Controller Dongle                   | 0x28de    | 0x2101     | 0       
 Offset | Type   | Size | Name                | Description
 -------|--------|------|---------------------|------------------------------------------------
 0x00   | uint8  | 1    | reportID            | HID report identifier (=3)
-0x01   | ?      | 7    | ?                   | unknown
+0x01   | ?      | 3    | ?                   | unknown
+0x04   | uint16 | 2    | lensSeparationA     | Lens separation potentiometer reading
+0x06   | ?      | 2    | ?                   | unknown
 0x08   | uint8  | 1    | pressedButtons      | 1: System button pressed / 0: no button pressed
 0x09   | ?      | 3    | ?                   | unknown
 0x0C   | uint8  | 1    | faceProximityChange | 0: No change / 1: Neg. change / 2: Pos. change
 0x0D   | ?      | 1    | ?                   | unknown
 0x0E   | uint16 | 2    | faceProximity       | Typical values: 40 - 1900
-0x10   | ?      | 2    | ?                   | Constant: 0x44 0x1B
+0x10   | uint16 | 2    | lensSeparationB     | Lens separation potentiometer reading
 0x12   | ?      | 46   | ?                   | unknown
+
+Both lens separation potentiometer readings scale linearly with the lens
+separation. There is a calibration value "lens_separation" in the config store.
 
 ### HMD: IMU
 
