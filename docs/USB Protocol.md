@@ -33,13 +33,9 @@ Wireless Controller Dongle                   | 0x28de    | 0x2101     | 0       
 Offset | Type   | Size | Name                | Description
 -------|--------|------|---------------------|------------------------------------------------
 0x00   | uint8  | 1    | reportID            | HID report identifier (=3)
-0x01   | ?      | 3    | ?                   | unknown
 0x04   | uint16 | 2    | lensSeparationA     | Lens separation potentiometer reading
-0x06   | ?      | 2    | ?                   | unknown
 0x08   | uint8  | 1    | pressedButtons      | 1: System button pressed / 0: no button pressed
-0x09   | ?      | 3    | ?                   | unknown
 0x0C   | uint8  | 1    | faceProximityChange | 0: No change / 1: Neg. change / 2: Pos. change
-0x0D   | ?      | 1    | ?                   | unknown
 0x0E   | uint16 | 2    | faceProximity       | Typical values: 40 - 1900
 0x10   | uint16 | 2    | lensSeparationB     | Lens separation potentiometer reading
 0x12   | ?      | 46   | ?                   | unknown
@@ -236,16 +232,14 @@ Offset | Type   | Size | Name              | Description
 Offset | Type   | Size | Name                | Description
 -------|--------|------|---------------------|------------------------------------------------------------
 0x00   | uint8  | 1    | reportID            | HID report identifier (=1)
-0x01   | ?      | 1    | ?                   | unknown
 0x02   | uint16 | 2    | reportType(?)       | 0x0B04: Ping (every second) / 0x3C01: User input
 0x04   | uint32 | 4    | reportCount         | Counter that increases with every report
 0x08   | uint32 | 4    | pressedButtons      | Bit field, see below for individual buttons
 0x0C   | uint16 | 2    | triggerOrBattery    | Analog trigger value (user input) / Battery voltage? (ping)
 0x0E   | uint8  | 1    | batteryCharge       | Bit 7: Charging / Bit 6..0: Battery charge in percent
-0x0F   | ?      | 1    | ?                   | unknown
 0x10   | uint32 | 4    | hardwareID          | Hardware ID (user input) / 0x00000000 (ping)
 0x14   | int16  | 2    | touchpadHorizontal  | Horizontal thumb position (Left: -32768 / Right: 32767)
-0x16   | int16  | 2    | touchpadVertical     | Vertical thumb position (Bottom: -32768 / Top: 32767)
+0x16   | int16  | 2    | touchpadVertical    | Vertical thumb position (Bottom: -32768 / Top: 32767)
 0x18   | ?      | 2    | ?                   | unknown
 0x1A   | uint16 | 2    | triggerHighRes      | Analog trigger value with higher resolution
 0x1C   | ?      | 24   | ?                   | unknown
@@ -259,8 +253,8 @@ Buttons:
 Bit  0: Trigger Button  
 Bit  3: Grip Buttons  
 Bit 12: Application Button  
-Bit 13: System Button
-Bit 18: Touchpad pressed
+Bit 13: System Button  
+Bit 18: Touchpad pressed  
 Bit 20: Thumb on touchpad
 
 
@@ -323,17 +317,18 @@ bytes contain a different type of event:
 
 Offset | Type   | Size | Name                | Description
 -------|--------|------|---------------------|------------------------------------------------------------
-0x05   | uint8  | 1    | pressedButtons      | Bit field, seel below for individual buttons
+0x05   | uint8  | 1    | pressedButtons      | Bit field, see below for individual buttons
 0x06   | ?      | 4    | ?                   | unknown
 
 Buttons:
 
-Bit  0: Trigger button
-Bit  1: Touchpad pressed
-Bit  2: Thumb on touchpad
-Bit  3: System button
-Bit  4: Grip button
+Bit  0: Trigger button  
+Bit  1: Touchpad pressed  
+Bit  2: Thumb on touchpad  
+Bit  3: System button  
+Bit  4: Grip button  
 Bit  5: Menu button
+
 
 ### Type: 0x3f4 (Analog trigger value)
 
