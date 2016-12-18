@@ -16,26 +16,24 @@ Since sync pulses are used to synchronize time, they have to hit all reachable s
 
 The following sync pulse lengths are defined:
 
-Name | skip | rotor | data | length (ticks) | length (µs)
------|------|-------|------|----------------|------------
-j0   | 0    | 0     | 0    | 3000           | 62.5
-j1   | 0    | 0     | 1    | 4000           | 83.3
-k0   | 0    | 1     | 0    | 3500           | 72.9
-k1   | 0    | 1     | 1    | 4500           | 93.8
-j2   | 1    | 0     | 0    | 5000           | 104
-j3   | 1    | 0     | 1    | 6000           | 125
-k2   | 1    | 1     | 0    | 5500           | 115
-k3   | 1    | 1     | 1    | 6500           | 135
-
-[TODO: Meaning of the names?]
+Name | skip | data | axis  | length (ticks) | length (µs)
+-----|------|------|-------|----------------|------------
+j0   | 0    | 0    | 0     | 3000           | 62.5
+k0   | 0    | 0    | 1     | 3500           | 72.9
+j1   | 0    | 1    | 0     | 4000           | 83.3
+k1   | 0    | 1    | 1     | 4500           | 93.8
+j2   | 1    | 0    | 0     | 5000           | 104
+k2   | 1    | 0    | 1     | 5500           | 115
+j3   | 1    | 1    | 0     | 6000           | 125
+k3   | 1    | 1    | 1     | 6500           | 135
 
 Each length represents a combination of 3 bit states:  
-The *rotor* bit determines which of the two rotors caused this sync pulse.  
+The *axis* bit determines the rotation axis for the laser sweep that follows the sync pulse.  
 The *skip* bit determines if the rotor will skip this period and leave its laser off.  
 The *data* bits of consecutive sync pulses of a base station concatenated together yield a data structure called OOTX Frame.
 
 Given a measured pulse length the best match can be chosen from the table above.  
-Given the 3 bits the pulse length can be calculated: length = 3000 + rotor\*500 + data\*1000 + skip\*2000
+Given the 3 bits the pulse length can be calculated: length = 3000 + axis\*500 + data\*1000 + skip\*2000
 
 ### OOTX Frame
 
