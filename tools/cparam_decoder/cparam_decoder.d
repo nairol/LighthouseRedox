@@ -8,7 +8,7 @@ void main( string[] args )
 {
 	auto buf = cast(ubyte[]) read(args[1]);
 	
-	auto cparams = buf[0xE52C..$]; //Only works with LHTX firmware 244 (HTC Vive). Change this address for other firmware versions.
+	auto cparams = buf[0xECF0..$]; //Only works with LHTX firmware 436 (HTC Vive). Change this address for other firmware versions.
 	decode( cparams, buf );
 }
 
