@@ -28,20 +28,28 @@ j3   | 1    | 1    | 0     | 6000           | 125
 k3   | 1    | 1    | 1     | 6500           | 135
 
 Each length represents a combination of 3 bit states:  
-The *axis* bit determines the rotation axis for the laser sweep that follows the sync pulse.  
-The *skip* bit determines if the rotor will skip this period and leave its laser off.  
-The *data* bits of consecutive sync pulses of a base station concatenated together yield a data structure called OOTX Frame.
+The **axis** bit determines the rotation axis for the laser sweep that follows the sync pulse.  
+The **skip** bit determines if the rotor will skip this period and leave its laser off.  
+The **data** bits of consecutive sync pulses of a base station concatenated together yield a data structure called OOTX Frame.
 
-Given a measured pulse length the best match can be chosen from the table above.  
-Given the 3 bits the pulse length can be calculated: length = 3000 + axis\*500 + data\*1000 + skip\*2000
+In reality the listed sync pulse lengths should be considered maximum values. The real length should be in a 500 tick window ending at the listed length.  
+E.g. sync pulse *j0* can be 2501-3000 ticks long depending on the position and orientation relative to the base station.
+
+Given a measured pulse length the best match can be found using:  
+`[skip,data,axis] = (length - 2501) / 500`
+
+Given the 3 bits the pulse length can be calculated:  
+`length = 3000 + axis\*500 + data\*1000 + skip\*2000`
 
 ### OOTX Frame
 
-An OOTX Frame is a data structure that base stations broadcast to all tracked objects. Each sync pulse contains one bit of data of the frame.
+The OOTX Frame is a data structure that base stations broadcast to all tracked objects in their field of view. Each sync pulse contains one bit of data of the frame.
 
 ![OOTX Frame Data Structure](images/OOTX Frame.png)
 
-[WIP]
+An OOTX frame transmission can be aborted and restarted by the sender at any time. The receiver always has to look out for the preamble sequence that marks the beginning of a new frame. Partially received frames should be ignored.
+
+The only known OOTX frame payload is the [Base Station Info Block](Base Station.md#base-station-info-block).
 
 ## Lasers
 
