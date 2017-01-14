@@ -8,7 +8,7 @@ The synchronization pulse is a short flash of light that base stations emit peri
 It is used for time synchronization and data transmission between base station and receivers.
 
 The rising edge signals the start of a new rotation period for one of the two rotors.
-The length of the sync pulse is used for identifying which rotor just hit its 0° mark, for determining if this rotor will activate its laser in this cycle, and for broadcasting information about the base station that sent this sync pulse.
+The length of the sync pulse is used for identifying which rotor just hit its 0Â° mark, for determining if this rotor will activate its laser in this cycle, and for broadcasting information about the base station that sent this sync pulse.
 
 Since sync pulses are used to synchronize time, they have to hit all reachable sensors of all tracked objects simultaneously. Therefore they use a wide angle light source like LEDs that can flood the entire tracked volume with light. The parts of a base station that generate this light pulse are called OOTX (Omnidirectional Optical Transmitter).
 
@@ -16,7 +16,7 @@ Since sync pulses are used to synchronize time, they have to hit all reachable s
 
 The following sync pulse lengths are defined:
 
-Name | skip | data | axis  | length (ticks) | length (µs)
+Name | skip | data | axis  | length (ticks) | length (Âµs)
 -----|------|------|-------|----------------|------------
 j0   | 0    | 0    | 0     | 3000           | 62.5
 k0   | 0    | 0    | 1     | 3500           | 72.9
@@ -39,7 +39,7 @@ Given a measured pulse length the best match can be found using:
 `[skip,data,axis] = (length - 2501) / 500`
 
 Given the 3 bits the pulse length can be calculated:  
-`length = 3000 + axis\*500 + data\*1000 + skip\*2000`
+`length = 3000 + axis*500 + data*1000 + skip*2000`
 
 ### OOTX Frame
 
