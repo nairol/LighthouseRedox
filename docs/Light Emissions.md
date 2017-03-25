@@ -49,7 +49,7 @@ The OOTX Frame is a data structure that base stations broadcast to all tracked o
 
 An OOTX frame transmission can be aborted and restarted by the sender at any time. The receiver always has to look out for the preamble sequence that marks the beginning of a new frame. Partially received frames should be ignored.
 
-The only known OOTX frame payload is the [Base Station Info Block](Base Station.md#base-station-info-block).
+The only known OOTX frame payload is the [Base Station Info Block](Base%20Station.md#base-station-info-block).
 
 ## Lasers
 
