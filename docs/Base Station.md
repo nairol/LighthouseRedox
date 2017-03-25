@@ -6,7 +6,7 @@ A Lighthouse Base Station is a light-emitting device that acts as a reference po
 
 ## Block Diagram
 
-![Base Station Block Diagram](images/Base Station - Block Diagram.png)
+![Base Station Block Diagram](images/Base%20Station%20-%20Block%20Diagram.png)
 
 ## Modes
 
