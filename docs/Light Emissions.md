@@ -45,7 +45,7 @@ Given the 3 bits the pulse length can be calculated:
 
 The OOTX Frame is a data structure that base stations broadcast to all tracked objects in their field of view. Each sync pulse contains one bit of data of the frame.
 
-![OOTX Frame Data Structure](images/OOTX Frame.png)
+![OOTX Frame Data Structure](images/OOTX%20Frame.png)
 
 An OOTX frame transmission can be aborted and restarted by the sender at any time. The receiver always has to look out for the preamble sequence that marks the beginning of a new frame. Partially received frames should be ignored.
 
