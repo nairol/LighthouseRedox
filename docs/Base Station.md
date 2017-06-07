@@ -78,9 +78,11 @@ To wake up a base station or to set its sleep timeout, write 20 bytes to the
 GATT characteristic with UUID 0000cb01-0000-1000-8000-00805f9b34fb (handle =
 0x0035):
 
+```
 gatttool --device=xx:xx:xx:xx:xx:xy -I
 [xx:xx:xx:xx:xx:xy][LE]> connect
 [xx:xx:xx:xx:xx:xy][LE]> char-write-req 0x0035 1202012cffffffff000000000000000000000000
+```
 
 Offset | Type   | Name             | Description
 -------|--------|------------------|------------
@@ -95,8 +97,10 @@ Offset | Type   | Name             | Description
 Waking up an already sleeping base station works with the ID set to 0xffffffff.
 To set the sleep timeout, ID must be set to the correct value.
 
+```
 [xx:xx:xx:xx:xx:xy][LE]> char-read-hnd 0x0035
 Characteristic value/descriptor: 00 12 01 2c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+```
 
 Offset | Type   | Name             | Description
 -------|--------|------------------|------------
@@ -109,7 +113,9 @@ Offset | Type   | Name             | Description
 
 ### Query radio firmware version
 
+```
 [xx:xx:xx:xx:xx:xy][LE]> char-write-req 0x0035 1503000000000000000000000000000000000000
+```
 
 Offset | Type   | Name             | Description
 -------|--------|------------------|------------
@@ -119,8 +125,10 @@ Offset | Type   | Name             | Description
 ...    | ...    |                  | ...
 0x13   | uint8  |                  | 0x00
 
+```
 [xx:xx:xx:xx:xx:xy][LE]> char-read-hnd 0x0035
 Characteristic value/descriptor: 00 15 03 02 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+```
 
 Offset | Type   | Name             | Description
 -------|--------|------------------|------------
@@ -133,4 +141,6 @@ Offset | Type   | Name             | Description
 ...    | ...    |                  | ...
 0x13   | uint8  |                  | 0x00
 
+```
 [xx:xx:xx:xx:xx:xy][LE]> disconnect
+```
