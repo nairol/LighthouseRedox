@@ -63,3 +63,74 @@ Phase probably describes the phase difference between the real rotor angle and t
 Tilt and curve are probably related to the rotation and distortion of the projected laser line.
 
 The **orientation vector accel.dir_[xyz]** is not a unit vector and its length has no meaning. It is scaled in a way that its biggest/smallest component always is +127/-127.
+
+## Bluetooth LE communications
+
+The Base stations can be put to sleep and woken up via a Bluetooth LE GATT
+characteristic. Also they can receive radio firmware updates.  The "Name" and
+"Alias" characteristics contain a string "HTC BS xyABCD" where xy is the last
+byte of the Bluetooth address and ABCD is half of the base station unique
+identifier.
+
+### Wake up and set sleep timeout
+
+To wake up a base station or to set its sleep timeout, write 20 bytes to the
+GATT characteristic with UUID 0000cb01-0000-1000-8000-00805f9b34fb (handle =
+0x0035):
+
+gatttool --device=xx:xx:xx:xx:xx:xy -I
+[xx:xx:xx:xx:xx:xy][LE]> connect
+[xx:xx:xx:xx:xx:xy][LE]> char-write-req 0x0035 1202012cffffffff000000000000000000000000
+
+Offset | Type   | Name             | Description
+-------|--------|------------------|------------
+0x00   | uint8  | unknown          | 0x12
+0x01   | uint8  | unknown          | 0x02
+0x02   | uint16 | timeout?         | big-endian, 300 s
+0x04   | uint32 | ID               | Unique identifier of the base station or 0xffffffff
+0x08   | uint8  |                  | 0x00
+...    | ...    |                  | ...
+0x13   | uint8  |                  | 0x00
+
+Waking up an already sleeping base station works with the ID set to 0xffffffff.
+To set the sleep timeout, ID must be set to the correct value.
+
+[xx:xx:xx:xx:xx:xy][LE]> char-read-hnd 0x0035
+Characteristic value/descriptor: 00 12 01 2c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+Offset | Type   | Name             | Description
+-------|--------|------------------|------------
+0x00   | uint8  | unknown          | 0x00
+0x01   | uint8  | unknown          | 0x12
+0x02   | uint16 | timeout?         | big-endian, 300 s
+0x04   | uint8  |                  | 0x00
+...    | ...    |                  | ...
+0x13   | uint8  |                  | 0x00
+
+### Query radio firmware version
+
+[xx:xx:xx:xx:xx:xy][LE]> char-write-req 0x0035 1503000000000000000000000000000000000000
+
+Offset | Type   | Name             | Description
+-------|--------|------------------|------------
+0x00   | uint8  | unknown          | 0x15
+0x01   | uint8  | unknown          | 0x03
+0x02   | uint8  |                  | 0x00
+...    | ...    |                  | ...
+0x13   | uint8  |                  | 0x00
+
+[xx:xx:xx:xx:xx:xy][LE]> char-read-hnd 0x0035
+Characteristic value/descriptor: 00 15 03 02 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+Offset | Type   | Name             | Description
+-------|--------|------------------|------------
+0x00   | uint8  | unknown          | 0x00
+0x01   | uint8  | unknown          | 0x15
+0x02   | uint8  | unknown          | 0x03
+0x03   | uint8  | version_major    | 0x02
+0x04   | uint8  | version_minor    | 0x0b
+0x05   | uint8  |                  | 0x00
+...    | ...    |                  | ...
+0x13   | uint8  |                  | 0x00
+
+[xx:xx:xx:xx:xx:xy][LE]> disconnect
