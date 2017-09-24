@@ -3,6 +3,7 @@
 import std.stdio : writef, writefln, writeln;
 import std.file : read, write;
 import std.string : fromStringz;
+import std.algorithm : sort;
 
 void main( string[] args )
 {
@@ -16,14 +17,17 @@ string[] types = ["void", "bool", "uint8", "uint16", "uint32", "int8", "int16", 
 
 uint decode( ubyte[] src, ubyte[] buf )
 {
-	writeln("EEPROM Offset | Address | Type | Length | Name | Default Value | Description | Writable | Has Default | Handler Address");
-	writeln("--------------|---------|------|--------|------|---------------|-------------|----------|-------------|----------------");
+	writeln("EEPROM Offset | RAM Address | Type | Length | Name | Default Value | Description | In EEPROM | Has Default | Handler Address");
+	writeln("--------------|-------------|------|--------|------|---------------|-------------|-----------|-------------|----------------");
+	writeln("000 | | uint32 | 4 | Partition Signature | 0x4D525043 (\"CPRM\") | Marks the beginning of a CParam partition | x | x | ");
+	writeln("004 | | uint32? | 4 | Write Counter? | | [Unconfirmed/Guess] Counts how many times the partition has been overwritten | x | | ");
+	writeln("008 | | uint32 | 4 | CRC32 of CParam data | | CRC32 of all following bytes that contain CParam data | x | | ");
 	
 	char[][][string] enumTypes;
 	
 	uint count = 0;
-	uint offset = 0;
-	while( src.length>=32 && src[0]>0 && src[0]<=13 )
+	uint offset = 0x0C;
+	while( src.length>=32 && src[0] > 0 && src[0]<=13 )
 	{
 		auto type = types[src[0]];
 		auto address = *cast(uint*)src[4..8].ptr;
@@ -31,22 +35,32 @@ uint decode( ubyte[] src, ubyte[] buf )
 		auto defaultValue = fromStringz( cast(char*)&buf[*cast(uint*)src[0xC..0x10].ptr] );
 		auto length = src[0x10];
 		auto bitfield = src[0x11];
+		auto inEEPROM = !(bitfield&1);
+		auto hasDefault = !(bitfield&2);
 		auto handler = *cast(uint*)src[0x14..0x18].ptr;
 		auto description = fromStringz( cast(char*)&buf[*cast(uint*)src[0x18..0x1C].ptr] );
 		auto enums = getEnums(buf, buf[(*cast(uint*)src[0x1C..0x20].ptr)..$]);
-		writef("%.3X | 0x%.8X | %-8s | %.3d | %s | %s | %s | ", offset, address, type, length, name, defaultValue, description);
-		writefln("%s | %s | 0x%.4X", bitfield&1?"":"x", bitfield&2?"":"x", handler);
-		if(enums.length>0) enumTypes[name.idup] = enums;
+		
+		
+		if(inEEPROM) { writef("%.3X", offset); }
+		else { writef("   "); }
+		
+		writef(" | 0x%.8X | %-8s | %.3d | %s | %s | %s | ", address, type, length, name, defaultValue, description);
+		writef("%s | %s", inEEPROM?"x":"", hasDefault?"x":"");
+		if( handler != 0 ) { writefln(" | 0x%.4X", handler); }
+		else { writefln(" | "); }
+		
+		if(enums.length>0) { enumTypes[name.idup] = enums; }
 		
 		count++;
-		offset += length;
+		offset += inEEPROM?length:0;
 		src = src[32..$];
 	}
 	
 	writefln("\nName | Possible Enum Values\n-----|---------------------");
-	foreach( string name, char[][] enumStr; enumTypes )
+	foreach( string name; enumTypes.keys.dup.sort() )
 	{
-		writefln("%s | %(%s, %)", name, enumStr);
+		writefln("%s | %(%s, %)", name, enumTypes[name]);
 	}
 	
 	return count;
