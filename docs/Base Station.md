@@ -58,11 +58,12 @@ E.g. In version 4 and 5 the data block is only 31 bytes long. The last two field
 
 The **ID** is a (pseudo-)random 32-bit number. The current implementation uses the CRC32 of the 128-bit MCU UID.
 
-The meaning of the **factory calibration data (fcal.\*)** is currently not known.  
-Phase probably describes the phase difference between the real rotor angle and the rotor angle measurement using the optical rotation sensor.  
-Tilt and curve are probably related to the rotation and distortion of the projected laser line.
+The factory calibration **fcal** provides information about nonidealities in the base station's laser emmisions caused by the production process.
+**fcal.n.phase** corrects the constant phase offset 
 
 The **orientation vector accel.dir_[xyz]** is not a unit vector and its length has no meaning. It is scaled in a way that its biggest/smallest component always is +127/-127.
+
+The flags in **sys.faults** are: 2=Unknown, 4=Laser0, 8=Laser1, 16=Motor0, 32=Motor1 [UNCONFIRMED]
 
 ## Bluetooth LE communications
 

@@ -1,8 +1,8 @@
 EEPROM Offset | RAM Address | Type | Length | Name | Default Value | Description | In EEPROM | Has Default | Handler Address
 --------------|-------------|------|--------|------|---------------|-------------|-----------|-------------|----------------
-000 | | uint32 | 4 | Partition Signature | 0x4D525043 ("CPRM") | Marks the beginning of a CParam partition | x | x | 
-004 | | uint32? | 4 | Write Counter? | | [Unconfirmed/Guess] Counts how many times the partition has been overwritten | x | | 
-008 | | uint32 | 4 | CRC32 of CParam data | | CRC32 of all following bytes that contain CParam data | x | | 
+000 | | uint32 | 4 | [Partition Signature] | 0x4D525043 ("CPRM") | Marks the beginning of a CParam partition | x | x | 
+004 | | uint32 | 4 | [Write Counter] | | Counts how many times the partition has been overwritten | x | | 
+008 | | uint32 | 4 | [CRC32 of CParam data] | | CRC32 of all following bytes that contain CParam data | x | | 
 00C | 0x100006C0 | uint32   | 004 | sys.param_magic | 1634492787 |  | x | x | 
 010 | 0x10000698 | string   | 016 | sys.name | DEFAULT | device name | x | x | 
 020 | 0x1000066C | bool     | 001 | timebase.debug | false | debug enable | x | x | 
