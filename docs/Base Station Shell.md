@@ -18,7 +18,7 @@ Hardware ID: 82020300
 Device Name is the same as parameter `sys.name`.  
 Serial Number is the same (pseudo-)random device-specific constant that is also sent via OOTX.  
 The first number of the Firmware Build is the combined firmware (bit 15..6) and protocol version (bit 5..0).  
-Hardware ID is the same as the contents of EEPROM address [0xE08..0xE0F] (8 bytes).
+Hardware ID is the same as the contents of EEPROM address \[0xE08..0xE0F] (8 bytes).
 
 
 ## uptime
@@ -151,18 +151,18 @@ Doesn't seem to do anything...
 The command toggles two variables (0x100004C9 and 0x10000531) but they are not used anywhere(?).
 
 
-## freq <Hz>
+## freq \<Hz>
 Change rotor spin frequency. Range 10-100 Hz. Stable range ~40-90 Hz.
 
 
-## carrier <Hz>
+## carrier \<Hz>
 Change modulation frequency. Range 500000-12000000 Hz.  
 Same as changing parameter `carrier.frequency`, but it checks the range limits.
 
 
 ## param
 
-### param list [filter]
+### param list \[filter]
 Lists all available parameters.  
 If a filter is specified the list only contains parameters starting with that expression. (No wildcard support)  
 [A better list of all parameters](../data/cparams/Vive%20Base%20Station%20436.md) is available in the data folder.
@@ -178,7 +178,7 @@ mode.0.carrier 1843200
 ```
 
 
-### param info <name>
+### param info \<name>
 Shows information about the given parameter.
 ```
 lhtx> param info timebase.mode
@@ -200,7 +200,7 @@ Offset is the address in each EEPROM partition that the parameter resides in.
 Unsaved is true if the parameter has been changed in RAM but hasn't been stored to EEPROM yet.
 
 
-### param get <name>
+### param get \<name>
 Prints the current value of the specified parameter.
 ```
 lhtx> param get carrier.frequency
@@ -208,7 +208,7 @@ carrier.frequency       1843200
 ```
 
 
-### param set <name> <value>
+### param set \<name> \<value>
 Changes the value of the specified parameter.
 ```
 lhtx> param set sys.standby true
@@ -216,7 +216,7 @@ lhtx> param set sys.standby true
 For boolean parameters the value 0 or 1 can be used instead of false or true.
 
 
-### param default <name>
+### param default \<name>
 Resets the specified parameter to its default value.
 ```
 lhtx> param default sys.standby
@@ -245,12 +245,12 @@ Partition 2 @ 0x0600 FACT: 0x49B10AA8 0x49B10AA8 CRC-OK 4
 ```
 
 
-### param erase <partition>
+### param erase \<partition>
 Erases the specified partition by overwriting it with zero-bytes.  
 **DO NOT erase partition 2** ("factory") unless you have a **VERY** good reason, **a backup** of the partition **and** know how to restore it.
 
 
-### param load [partition]
+### param load \[partition]
 Loads all params from the currently active (or the specified) EEPROM partition.
 ```
 lhtx> param load 0
@@ -258,16 +258,16 @@ lhtx> param load 0
 ```
 
 
-### param save [<partition> <newWriteCounterValue>]
+### param save \[\<partition> \<newWriteCounterValue>]
 The implicit variant of this command (`param save`) selects one of the first two partitions, increments its writeCounter value and writes all EEPROM-backed parameters into it. This variant is safe to use. It is also automatically called each time the mode button is pressed.  
 
 When using the other variant of this command where the partition and new write counter value must be specified and you want to save to partition 2 ("factory"), ensure that you have a backup of the partition AND know how to restore it.
 
 
-### param raw <r|w> <address>
+### param raw \<r|w> \<address>
 Reads/writes all parameters from/to EEPROM starting at the specified base address.  
 The only sensible addresses for this command are the 3 partition base addresses plus the partition header size: 0x000C, 0x030C, 0x060C  
-Do not use addresses in the range [0x03C0..0x083F] for writing or the factory partition will be damaged/overwritten!  
+Do not use addresses in the range \[0x03C0..0x083F] for writing or the factory partition will be damaged/overwritten!  
 Also do not use addresses bigger than 0x0B80 for writing or the hardware ID will be overwritten!
 ```
 lhtx> param raw r 0x000C
@@ -376,7 +376,7 @@ PWM optimisation complete.
 ```
 
 
-## ram [address] [length]
+## ram \[address] \[length]
 Print a hex dump of the specified RAM range or of the whole RAM.  
 Address must be in 0x0000 .. 0x1FFF.  
 Length must be in 0x0000 .. (0x2000-address).
@@ -462,7 +462,7 @@ Individual registers can be read with `isl58303 [address]`. There is also a comm
 
 ## eeprom
 
-### eeprom r <sourceAddress> <length>
+### eeprom r \<sourceAddress> \<length>
 Print a hex dump of the specified EEPROM range.  
 SourceAddress must be in 0x000 .. 0xFC0.  
 Length must be in 0x000 .. (0xFC0-sourceAddress).
@@ -474,7 +474,7 @@ lhtx> eeprom r 0x600 32
 ```
 
 
-### eeprom w <destAddress> <length>
+### eeprom w \<destAddress> \<length>
 Write data to the EEPROM.  
 Do not touch the memory regions 0x600-0x8FF ("Factory" partition) and 0xDC0-0xE0F (hardware id) unless you have a backup copy of the original data!  
 
@@ -486,7 +486,7 @@ lhtx> eeprom w 0xF00 8
 ```
 
 
-### eeprom c <sourceAddress> <length> <destAddress>
+### eeprom c \<sourceAddress> \<length> \<destAddress>
 Copy data in EEPROM from sourceAddress to destAddress.  
 Do not touch the memory regions 0x600-0x8FF ("Factory" partition) and 0xDC0-0xE0F (hardware id) unless you have a backup copy of the original data!
 ```
@@ -494,7 +494,7 @@ lhtx> eeprom c 0xF00 8 0xF08
 ```
 
 
-### eeprom e <destAddress> <length>
+### eeprom e \<destAddress> \<length>
 Erase data in EEPROM. (Overwrite with zero-bytes)  
 Do not touch the memory regions 0x600-0x8FF ("Factory" partition) and 0xDC0-0xE0F (hardware id) unless you have a backup copy of the original data!
 ```
