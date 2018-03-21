@@ -1,8 +1,8 @@
 EEPROM Offset | RAM Address | Type | Length | Name | Default Value | Description | In EEPROM | Has Default | Handler Address
 --------------|-------------|------|--------|------|---------------|-------------|-----------|-------------|----------------
-000 | | uint32 | 4 | [Partition Signature] | 0x4D525043 ("CPRM") | Marks the beginning of a CParam partition | x | x | 
-004 | | uint32 | 4 | [Write Counter] | | Counts how many times the partition has been overwritten | x | | 
-008 | | uint32 | 4 | [CRC32 of CParam data] | | CRC32 of all following bytes that contain CParam data | x | | 
+000 | _ | uint32 | 4 | [Partition Signature] | 0x4D525043 ("CPRM") | Marks the beginning of a CParam partition | x | x | 
+004 | _ | uint32 | 4 | [Write Counter] | | Counts how many times the partition has been overwritten | x | | 
+008 | _ | uint32 | 4 | [CRC32 of CParam data] | | CRC32 of all following bytes that contain CParam data | x | | 
 00C | 0x100006C0 | uint32   | 004 | sys.param_magic | 1634492787 |  | x | x | 
 010 | 0x10000698 | string   | 016 | sys.name | DEFAULT | device name | x | x | 
 020 | 0x1000066C | bool     | 001 | timebase.debug | false | debug enable | x | x | 
@@ -16,19 +16,19 @@ EEPROM Offset | RAM Address | Type | Length | Name | Default Value | Description
 037 | 0x10000690 | float    | 004 | timebase.i | 0 | timebase phase filter coefficient | x | x | 
 03B | 0x10000694 | float    | 004 | timebase.d | 1.0 | timebase phase filter coefficient | x | x | 
 03F | 0x10000688 | float    | 004 | timebase.k | 0.999 | timebase phase filter coefficient | x | x | 
-    | 0x1000066D | bool     | 001 | timebase.locked | true | timebase estimator lock indication |  | x | 
-    | 0x1000066F | enum     | 001 | timebase.source | internal | timebase source |  | x | 
-    | 0x10000678 | uint32   | 004 | timebase.current | 0 | sensed current timebase period |  | x | 
-    | 0x1000067C | bool     | 001 | timebase.tdm | false | TDM mode active |  | x | 
+_   | 0x1000066D | bool     | 001 | timebase.locked | true | timebase estimator lock indication |  | x | 
+_   | 0x1000066F | enum     | 001 | timebase.source | internal | timebase source |  | x | 
+_   | 0x10000678 | uint32   | 004 | timebase.current | 0 | sensed current timebase period |  | x | 
+_   | 0x1000067C | bool     | 001 | timebase.tdm | false | TDM mode active |  | x | 
 043 | 0x100002A4 | bool     | 001 | corr.enable | true | correlator enable | x | x | 
 044 | 0x100002A5 | bool     | 001 | corr.debug | false | debug enable | x | x | 
 045 | 0x100002B0 | float    | 004 | corr.k | 0.999 | correlator period filter coefficient | x | x | 
 049 | 0x100002AC | uint32   | 004 | corr.tolerance | 400 | correlator period tolerance (ticks) | x | x | 
 04D | 0x100002B4 | uint32   | 004 | corr.settle | 300 | correlator settling (periods) | x | x | 
 051 | 0x100002B8 | uint32   | 004 | corr.timeout | 300 | correlator signal time-out (periods) | x | x | 
-    | 0x100002BC | enum     | 001 | corr.status | disabled | correlator status |  | x | 
-    | 0x100002C8 | float    | 004 | corr.period | 0 | master's estimated period (ticks) |  | x | 
-    | 0x100002C4 | uint32   | 004 | corr.missed | 0 | missed periods |  | x | 
+_   | 0x100002BC | enum     | 001 | corr.status | disabled | correlator status |  | x | 
+_   | 0x100002C8 | float    | 004 | corr.period | 0 | master's estimated period (ticks) |  | x | 
+_   | 0x100002C4 | uint32   | 004 | corr.missed | 0 | missed periods |  | x | 
 055 | 0x100005CC | bool     | 001 | carrier.enable | true | subcarrier enable | x | x | 
 056 | 0x100005CD | bool     | 001 | carrier.debug | false | debug enable | x | x | 
 057 | 0x100005D0 | uint32   | 004 | carrier.frequency | 1843200 | Carrier frequency (Hz) | x | x | 0x372D
@@ -47,8 +47,8 @@ EEPROM Offset | RAM Address | Type | Length | Name | Default Value | Description
 073 | 0x100003E8 | float    | 004 | laser.0.pwr.b | 9.0 | FPD offset | x | x | 
 077 | 0x100003E0 | float    | 004 | laser.0.pwr.m | 0.434 | FPD calibration | x | x | 
 07B | 0x100003DA | uint16   | 002 | laser.0.pwr.gain | 3 | FPD amplifier gain set | x | x | 
-    | 0x100003EC | float    | 004 | laser.0.pwr.detected | 0 | FPD amplifier output |  | x | 
-    | 0x100003F0 | float    | 004 | laser.0.pwr.average | 0 | FPD power measurement average |  | x | 
+_   | 0x100003EC | float    | 004 | laser.0.pwr.detected | 0 | FPD amplifier output |  | x | 
+_   | 0x100003F0 | float    | 004 | laser.0.pwr.average | 0 | FPD power measurement average |  | x | 
 07D | 0x100003F4 | bool     | 001 | laser.1.enable | true | laser enable | x | x | 
 07E | 0x100003F5 | bool     | 001 | laser.1.fullspin | false | laser full spin illumination enable | x | x | 
 07F | 0x100003F8 | float    | 004 | laser.1.start | 25.0 | laser turn-on offset (degrees) | x | x | 
@@ -59,8 +59,8 @@ EEPROM Offset | RAM Address | Type | Length | Name | Default Value | Description
 08D | 0x10000410 | float    | 004 | laser.1.pwr.b | 9.0 | FPD offset | x | x | 
 091 | 0x10000408 | float    | 004 | laser.1.pwr.m | 0.434 | FPD calibration | x | x | 
 095 | 0x10000402 | uint16   | 002 | laser.1.pwr.gain | 3 | FPD amplifier gain set | x | x | 
-    | 0x10000414 | float    | 004 | laser.1.pwr.detected | 0 | FPD amplifier output |  | x | 
-    | 0x10000418 | float    | 004 | laser.1.pwr.average | 0 | FPD power measurement average |  | x | 
+_   | 0x10000414 | float    | 004 | laser.1.pwr.detected | 0 | FPD amplifier output |  | x | 
+_   | 0x10000418 | float    | 004 | laser.1.pwr.average | 0 | FPD power measurement average |  | x | 
 097 | 0x100004BC | bool     | 001 | rotor.0.enable | true | motor enable | x | x | 
 098 | 0x100004BD | bool     | 001 | rotor.0.debug | false | debug enable | x | x | 
 099 | 0x100004BE | uint16   | 002 | rotor.0.pwm | 2000 | coarse PWM speed control | x | x | 
@@ -160,21 +160,21 @@ EEPROM Offset | RAM Address | Type | Length | Name | Default Value | Description
 180 | 0x100005D8 | bool     | 001 | accel.enable | true | accelerometer enable | x | x | 
 181 | 0x100005D9 | bool     | 001 | accel.debug | false | debug enable | x | x | 
 182 | 0x100005DC | float    | 004 | accel.b1 | 0.97 | filter coeff | x | x | 
-    | 0x100005E8 | float    | 004 | accel.x | 0 | accelerometer vector |  | x | 
-    | 0x100005EC | float    | 004 | accel.y | 0 | accelerometer vector |  | x | 
-    | 0x100005F0 | float    | 004 | accel.z | 0 | accelerometer vector |  | x | 
-    | 0x100005F4 | float    | 004 | accel.magnitude | 0 | acceleration (m/s^2) |  | x | 
-    | 0x100005DA | bool     | 001 | accel.is_gravity | false | is acceleration consistent with gravity |  | x | 
-    | 0x100005F8 | int8     | 001 | accel.dir_x | 0 | orientation vector |  | x | 
-    | 0x100005F9 | int8     | 001 | accel.dir_y | 0 | orientation vector |  | x | 
-    | 0x100005FA | int8     | 001 | accel.dir_z | 0 | orientation vector |  | x | 
+_   | 0x100005E8 | float    | 004 | accel.x | 0 | accelerometer vector |  | x | 
+_   | 0x100005EC | float    | 004 | accel.y | 0 | accelerometer vector |  | x | 
+_   | 0x100005F0 | float    | 004 | accel.z | 0 | accelerometer vector |  | x | 
+_   | 0x100005F4 | float    | 004 | accel.magnitude | 0 | acceleration (m/s^2) |  | x | 
+_   | 0x100005DA | bool     | 001 | accel.is_gravity | false | is acceleration consistent with gravity |  | x | 
+_   | 0x100005F8 | int8     | 001 | accel.dir_x | 0 | orientation vector |  | x | 
+_   | 0x100005F9 | int8     | 001 | accel.dir_y | 0 | orientation vector |  | x | 
+_   | 0x100005FA | int8     | 001 | accel.dir_z | 0 | orientation vector |  | x | 
 186 | 0x100006AA | bool     | 001 | sys.warnings | false | warnings and info enable | x | x | 
 187 | 0x00000000 | reserved | 004 |  |  |  | x | x | 
-    | 0x100006AB | bool     | 001 | sys.emission_enable | true | optical output enable |  | x | 
-    | 0x100006B4 | uint32   | 004 | sys.uptime | 0 | system uptime (seconds) |  | x | 
-    | 0x100006AC | bool     | 001 | sys.standby | false | standby power down enable |  | x | 0xCFD5
-    | 0x100006AD | bool     | 001 | sys.identify | false | identify blink enable |  | x | 
-    | 0x100006A8 | uint8    | 001 | sys.faults | 0 | fault detect flags |  | x | 
+_   | 0x100006AB | bool     | 001 | sys.emission_enable | true | optical output enable |  | x | 
+_   | 0x100006B4 | uint32   | 004 | sys.uptime | 0 | system uptime (seconds) |  | x | 
+_   | 0x100006AC | bool     | 001 | sys.standby | false | standby power down enable |  | x | 0xCFD5
+_   | 0x100006AD | bool     | 001 | sys.identify | false | identify blink enable |  | x | 
+_   | 0x100006A8 | uint8    | 001 | sys.faults | 0 | fault detect flags |  | x | 
 18B | 0x100003E4 | float    | 004 | laser.0.pwr.b2 | 0 | FPD intercept | x | x | 
 18F | 0x1000040C | float    | 004 | laser.1.pwr.b2 | 0 | FPD intercept | x | x | 
 193 | 0x00000000 | reserved | 120 |  |  |  | x | x | 
