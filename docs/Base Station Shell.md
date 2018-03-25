@@ -68,7 +68,7 @@ corr optical (k = 11511): mu = 16.667 ms, sigma = 0.347 us (20.8 ppm) 406.9 lock
                   |            |                  |         sigma/mu in parts per million
                   |            |                  Standard deviation of optical sync period
                   |            Mean optical sync period
-				  Number of samples (sync flashes)
+                  Number of samples (sync flashes)
 ```
 
 
