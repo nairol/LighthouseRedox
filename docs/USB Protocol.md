@@ -349,7 +349,7 @@ Offset | Type   | Size | Name                | Description
 
 Offset | Type   | Size | Name                | Description
 -------|--------|------|---------------------|------------------------------------------------------------
-0x05   | int16  | 1    | pressedButtons      | Bit field, see above for individual buttons
+0x05   | uint8  | 1    | pressedButtons      | Bit field, see above for individual buttons
 0x06   | int16  | 2    | touchpadHorizontal  | Horizontal thumb position
 0x08   | int16  | 2    | touchpadVertical    | Vertical thumb position
 0x0A   | ?      | 4    | ?                   | unknown
